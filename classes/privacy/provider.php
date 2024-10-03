@@ -27,7 +27,7 @@ use core_privacy\local\request\writer;
  * Class provider
  *
  * @package    mod_simplecertificate
- * @copyright  2024 YOUR NAME <your@email.com>
+ * @copyright  2024 Karl Michael Reyes <michaelreyes@catalyst-ca.net>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class provider implements 
@@ -117,7 +117,7 @@ class provider implements
 
     public static function export_user_preferences(int $userid) {
         // Fetch user preference for the simplecertificate plugin.
-        $certificateemailnotification = get_user_preference('certificateemailnotification', null, $userid);
+        $certificateemailnotification = get_user_preferences('certificateemailnotification', null, $userid);
 
         // Check if the preference is set and handle the description accordingly.
         if (null !== $certificateemailnotification) {
